@@ -1,0 +1,27 @@
+<%- include('../partials/header.ejs')%>
+<main class="main">
+    <div class="container text-center">
+        <div class="trade-picture">
+            <img class="logol" src="<%= tradeList.img_url %>" alt="Not Found">
+            <div class="trade-info">
+                <h2><%= tradeList.title %></h2>
+                <h3><%= tradeList.model %></h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-left">
+        <h3 class="heading-1">Details</h3>
+        <p class="para-1"><%= tradeList.details %></p>
+        <h6><%= tradeList.timestamp %></h6>
+    </div>
+
+    <div class="container text-center">
+        <form>
+            <button type="submit" formmethod="GET" formaction="/trades/<%= tradeList.id %>/edit" class="btn btn-light">Edit</button>                                   
+            <button type="submit" formmethod="POST" formaction="/trades/<%= tradeList.id %>?_method=delete" class="btn btn-dark">Delete</button>
+          </form>
+    </div>
+</main>
+
+    <%- include('../partials/footer.ejs')%>

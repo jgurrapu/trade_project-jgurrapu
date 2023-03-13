@@ -1,0 +1,34 @@
+<%- include('../partials/header.ejs')%>
+    <main>
+        <br>
+        <div>
+            <form action='/trades/<%= tradeList.id%>?_method=PUT' method='POST'>
+                <div>
+                    <div>
+                        <label for="category">PC category</label>
+                        <input type="text" id="category" name="category" placeholder="Category" value="<%= tradeList.category %>" />
+                    </div>
+                </div>
+                <div>
+                    <label for="title">Product</label>
+                    <input type="text" id="title" name="title" placeholder="Product" value="<%= tradeList.title %>" />
+                </div>
+                <div>
+                    <label for="model">Product ID</label>
+                    <input type="text" id="model" name="model" placeholder="ID" value="<%= tradeList.model %>" />
+                </div>
+                <div>
+                    <label for="details">Product Description</label>
+                    <textarea id="details" name="details" placeholder="Description" rows="4"><%= tradeList.details %></textarea>
+                </div>
+                <div>
+                    <label for="img_url">Image:</label>
+                    <input type="text" id="img_url" name="img_url" placeholder="Image URL" value="<%= tradeList.img_url %>" />
+                </div>
+                <div>
+                    <button type="submit" >Update</button>
+                </div>
+            </form>
+        </div>
+    </main>
+<%- include('../partials/footer.ejs')%>

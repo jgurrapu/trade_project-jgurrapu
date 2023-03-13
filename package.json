@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "content-disposition": "^0.5.4",
+    "content-type": "^1.0.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "logger": "^0.0.1",
+    "luxon": "^2.3.1",
+    "merge-descriptors": "^1.0.1",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "uuid": "^8.3.2"
+  },
+  "name": "project-1",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Snehal Thakkar",
+  "license": "ISC",
+  "description": ""
+}

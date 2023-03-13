@@ -1,0 +1,24 @@
+<%- include('../partials/header.ejs')%>
+    <main class="main">
+        <br>
+        <div class="category-container">
+            <% if (category.length) { %>
+                <% for (let i = 0; i < category.length; i++) { %>
+                  <b><%= category[i] %></b>
+                  <% const filteredList = tradeList.filter(item => item.category === category[i]);
+                     if (filteredList.length) { %>
+                    <ul>
+                      <% for (let j = 0; j < filteredList.length; j++) { %>
+                        <li><a style="text-decoration: none" href="/trades/<%= filteredList[j].id %>"><%= filteredList[j].title %></a></li>
+                      <% } %>
+                    </ul>
+                  <% } else { %>
+                    <p>There are no products to display.</p>
+                  <% } %>
+                <% } %>
+              <% } else { %>
+                <h4>There aren't other categories.</h4>
+              <% } %>                            
+        </div>
+    </main>
+    <%- include('../partials/footer.ejs')%>

@@ -1,0 +1,38 @@
+<%- include('../partials/header.ejs')%>
+    <main>
+        <br>
+        <div>
+
+            <form action='/trades' method='POST'>
+                <div class="row mb-4">
+                  <div class="col">
+                    <div class="form-outline">
+                      <label for="category">PC category</label>
+                      <input type="text" id="category" name="category" placeholder="Category" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-outline mb-4">
+                  <label for="title">Product</label>
+                  <input type="text" id="title" name="title" placeholder="Product" class="form-control" />
+                </div>
+                <div class="form-outline mb-4">
+                  <label for="model">Product ID</label>
+                  <input type="text" id="model" name="model" placeholder="ID" class="form-control" />
+                </div>
+                <div class="form-outline mb-4">
+                  <label for="details">Product Description</label>
+                  <textarea class="form-control" id="details" name="details" placeholder="Description" rows="4"></textarea>
+                </div>
+                <div class="form-outline mb-4">
+                  <label for="img_url">Image:</label>
+                  <input type="text" id="img_url" name="img_url" placeholder="Image URL" class="form-control" />
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-details-md-end">
+                  <button class="btn btn-primary" type="submit">Start Trading</button>
+                </div>
+              </form>
+                       
+        </div>
+    </main>
+<%- include('../partials/footer.ejs')%>
